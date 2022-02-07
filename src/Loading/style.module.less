@@ -1,0 +1,47 @@
+@keyframes loading {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  34% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.loading-content {
+  padding: 150px 0;
+  :global {
+    .loading {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+      position: relative;
+      > * {
+        width: 100px;
+        height: 100px;
+        background: #02996a;
+        opacity: 0;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        animation-fill-mode: both;
+        &:nth-of-type(2) {
+          animation-delay: 0.3s;
+        }
+        &:nth-of-type(3) {
+          animation-delay: 0.6s;
+        }
+        :local {
+          animation: loading 2s 0s linear infinite;
+        }
+      }
+    }
+  }
+}

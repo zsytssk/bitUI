@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "allowJs": true,
+    "module": "ESNext",
+    "target": "es6",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "lib": ["es7", "dom"],
+    "moduleResolution": "Node",
+    "baseUrl": "./",
+    "jsx": "react-jsx",
+    "paths": {
+      "@app/*": ["src/*"]
+    }
+  },
+  "include": ["src"]
+}

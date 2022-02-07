@@ -1,0 +1,247 @@
+.selectDateDropdownBtn {
+  width: 1.78rem;
+  border-radius: 4px;
+  box-sizing: content-box;
+  background: #161f2c;
+  box-shadow: 0 0 6px 0 rgb(0 0 0 / 50%);
+  border-radius: 4px;
+  padding: 0.11rem;
+  color: #7286a6;
+  & > p {
+    &:first-child {
+      margin-top: 0;
+    }
+    margin: 8px 0 6px;
+  }
+  :global {
+    .datePicker {
+      box-sizing: border-box;
+      margin: 0;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 0.14rem;
+      font-variant: tabular-nums;
+      line-height: 1.5715;
+      list-style: none;
+      font-feature-settings: 'tnum';
+      padding: 4px 0.11rem;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      transition: border 0.3s, box-shadow 0.3s;
+      height: 0.32rem;
+      border-radius: 4px;
+      border: 1px solid #0f151f;
+      background: #0f151f;
+      .bit-dropdown {
+        top: 0.34rem !important;
+        left: 0;
+      }
+
+      input {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        outline: none !important;
+        color: #fff;
+      }
+    }
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.13rem;
+      padding: 0 2px;
+      a {
+        cursor: pointer;
+        &:hover {
+          color: #bbcbe3;
+        }
+      }
+    }
+  }
+}
+
+.trigger {
+  justify-content: space-between;
+  display: inline-flex;
+  align-items: center;
+  background-color: #171f2c;
+  border-radius: 0.2rem;
+  min-width: 1.7rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  padding: 0 0.18rem;
+  margin-right: 0.1rem;
+
+  svg {
+    margin-left: 5px;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:global(.picker-focused) {
+    svg {
+      transform: rotate(-90deg) !important;
+    }
+  }
+}
+
+.selectDateDropdownH5Wrap {
+  left: 0 !important;
+  width: 100%;
+
+  :global {
+    .bc-modal-container {
+      width: 100%;
+      max-width: 100%;
+      bottom: 0;
+      top: auto;
+      left: 0;
+      transform: translate(0, 100%);
+      background-color: #233043;
+      overflow: hidden;
+      transition: all 300ms;
+
+      &.selectDateH5 {
+        &-enter-done,
+        &-enter-active {
+          opacity: 1;
+          transform: translate(0, 0);
+        }
+
+        &-exit-done,
+        &-exit-active {
+          opacity: 0;
+          transform: translate(0, 100%);
+        }
+      }
+    }
+
+    .header {
+      height: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 0.1rem 0 0.3rem;
+      font-size: 0.26rem;
+      border-bottom: 1px solid #394e6b;
+      color: #fff;
+      .close {
+        height: 100%;
+        width: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        svg {
+          width: 0.25rem;
+          height: 0.25rem;
+        }
+      }
+    }
+
+    .selectDateDropdownBtnH5 {
+      font-size: 0.26rem;
+      .top {
+        padding: 0.3rem 0.3rem 0;
+        display: flex;
+        font-size: 0.26rem;
+        color: #7286a6;
+        justify-content: space-between;
+        align-items: center;
+        .datePicker {
+          flex: 1;
+          .inputBox {
+            border: 1px solid #394e6b;
+            display: flex;
+            align-items: center;
+            border-radius: 6px;
+            input {
+              flex: 1;
+              box-shadow: none;
+              padding: 0 0.2rem;
+              margin: 0;
+              box-sizing: border-box;
+              width: 100%;
+              font-size: 0.26rem;
+              color: #c4d2e6;
+              background-color: transparent;
+              border: none;
+              height: 0.6rem;
+              box-shadow: none;
+            }
+            svg {
+              transform: rotate(90deg);
+              margin: 0 0.15rem;
+              width: 0.15rem;
+              height: 0.15rem;
+              transition: transform 150ms;
+            }
+
+            &.inputBoxOpen {
+              svg {
+                transform: rotate(270deg);
+              }
+            }
+          }
+        }
+        .space {
+          display: block;
+          width: 0.3rem;
+          text-align: center;
+        }
+      }
+      .bottom {
+        padding: 0 0.3rem;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0.3rem;
+        a {
+          display: block;
+          flex: 1;
+          background-color: #1d283a;
+          border: 1px solid #1d283a;
+          border-radius: 6px;
+          height: 0.6rem;
+          line-height: 0.57rem;
+          text-align: center;
+          &:not(:first-child) {
+            margin-left: 0.28rem;
+          }
+
+          &.cur {
+            color: #02996a;
+            border-color: #02996a;
+            border: 1px solid #02996a;
+          }
+        }
+      }
+      .footer {
+        display: flex;
+        margin-top: 0.34rem;
+        padding: 0 0.3rem 0.4rem 0.3rem;
+        a {
+          flex: 1;
+          height: 0.6rem;
+          border-radius: 0.06rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &:not(:last-child) {
+            margin-right: 0.28rem;
+          }
+
+          &.confirm {
+            color: #fff;
+            background: linear-gradient(#05c9a3, #02996a);
+            text-shadow: 0 1px 3px rgb(0 0 0 / 50%);
+            cursor: pointer;
+            &:hover {
+              background: linear-gradient(#16e8be, #079a7d);
+            }
+          }
+        }
+      }
+    }
+  }
+}

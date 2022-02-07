@@ -1,0 +1,36 @@
+// @import '@ui/mixin.less';
+@import '@ui/Button/index.less';
+
+.copyButton {
+  display: inline-flex;
+  align-items: center;
+  color: #02996a;
+  border: 1px solid #02996a;
+  cursor: pointer;
+
+  @media screen and (max-width: 767px) {
+    font-size: 0.26rem;
+    border-radius: 0.06rem;
+    padding: 0.12rem 0.2rem;
+  }
+  @media screen and (min-width: 768px) {
+    border-radius: 4px;
+    padding: 6px 10px;
+    svg {
+      width: 14px;
+      height: 14px;
+      margin-right: 5px;
+    }
+  }
+}
+
+.tooltip {
+  :global {
+    .bit-tooltip-inner {
+      font-size: 14px;
+      @media screen and (max-width: 767px) {
+        font-size: 0.24rem;
+      }
+    }
+  }
+}
